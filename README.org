@@ -32,16 +32,22 @@ You may want to save the file to your directory $USR_SCRIPTS with useful scripts
 
 *** Download the script.
 
-**** wget:
+**** ~wget~:
      #+BEGIN_SRC sh
      wget https://raw.githubusercontent.com/sdll/dirabbrev/master/dirabbrev
      #+END_SRC
 
-**** curl:
+**** ~curl~:
  #+BEGIN_SRC sh
      curl -O https://raw.githubusercontent.com/sdll/dirabbrev/master/dirabbrev
  #+END_SRC
 *** Add the *dirabbrev* script to $PATH
+*** If required, manually edit .dirabbrev aliases
+The syntax for .dirabbrev is simple. For a directory at ~/path/to/dir~ and the corresponding alias ~shortened_name~, add the following line:
+
+#+BEGIN_SRC sh
+shortened_name /path/to/dir
+#+END_SRC
 *** Source .dirabbrev aliases
 **** bash/zsh
 #+BEGIN_SRC sh
