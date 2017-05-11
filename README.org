@@ -32,12 +32,12 @@ You may want to save the file to your directory $USR_SCRIPTS with useful scripts
 
 *** Download the script.
 
-**** #wget#:
+**** wget:
      #+BEGIN_SRC sh
      wget https://raw.githubusercontent.com/sdll/dirabbrev/master/dirabbrev
      #+END_SRC
 
-**** #curl#:
+**** curl:
  #+BEGIN_SRC sh
      curl -O https://raw.githubusercontent.com/sdll/dirabbrev/master/dirabbrev
  #+END_SRC
