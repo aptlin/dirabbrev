@@ -1,0 +1,53 @@
+* dirabbrev -- dynamic management of directory paths
+
+/Thank you, Carsten Dominik, for your work and inspiration. See Carsten's [[https://staff.science.uva.nl/c.dominik/Tools/dirabbrev/][original script]]./
+
+*dirabbrev* is a compact Perl script to abbreviate and manage long directory paths. 
+
+The user is free to assign any alias to a desired path using a shell
+command or a configuration file, by default located at
+~/.dirabbrev. *dirabbrev* then automatically saves the alias and the
+corresponding environment variable.
+
+Abbreviations are reinstalled in every new instance of a shell.
+
+** Requirements
+
+Perl 5.003 or higher
+
+** Supported Shells
+ 
+- sh
+- bash
+- zsh
+- fish
+- csh
+- tcsh
+- ksh
+
+** Installation
+
+*** Choose a home directory for the script
+You may want to save the file to your directory $USR_SCRIPTS with useful scripts, like ~/.bin or ~/.scripts, for example.
+
+*** Download the script.
+
+**** #wget#:
+     #+BEGIN_SRC sh
+     wget https://raw.githubusercontent.com/sdll/dirabbrev/master/dirabbrev
+     #+END_SRC
+
+**** #curl#:
+ #+BEGIN_SRC sh
+     curl -O https://raw.githubusercontent.com/sdll/dirabbrev/master/dirabbrev
+ #+END_SRC
+*** Add the *dirabbrev* script to $PATH
+*** Source .dirabbrev aliases
+**** bash/zsh
+#+BEGIN_SRC sh
+eval $(dirabbrev -a -e -d)
+#+END_SRC
+**** fish
+#+BEGIN_SRC sh
+eval (dirabbrev -a -e -d)
+#+END_SRC
